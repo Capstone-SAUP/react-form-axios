@@ -61,9 +61,20 @@ const Register = () => {
       setErrMsg("Invalid Entry");
       return;
     }
+    console.log(user ,pwd);
+    setSuccess(true);
 }
 
   return (
+    <>
+    {success ? (
+      <section>
+        <h1>Success</h1>
+        <p>
+          <a href="#"></a>
+        </p>
+      </section>
+    ) : (
     <section>
       <p
         ref={errRef}
@@ -176,6 +187,8 @@ const Register = () => {
         </p>
       </form>
     </section>
+    )}
+    </>
   );
 };
 
